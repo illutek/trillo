@@ -227,15 +227,22 @@
 /////////////////////
 
 .overview {
+    border-bottom: var(--color-grey-light--2) solid 1px;
     display: flex;
-    // justify-content: space-between;
+    align-items: center;
 
     &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 2rem 3rem;
 
     }
 
     &__stars {
         margin-right: auto;
+        display: flex;
 
     }
 
@@ -266,3 +273,29 @@
 
 }
 
+
+///////////////////////
+// BUTTON
+///////////////////////
+
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px currentColor solid;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        color: var(--color-grey-dark--3);
+    }
+
+    &:focus {
+        outline: none;
+        
+    }
+
+}
