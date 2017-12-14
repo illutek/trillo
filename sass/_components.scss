@@ -392,22 +392,26 @@
 //////////////////////
 .recommend {
     font-size: 1.3rem;
-    color: var(--color-grey-light--2);
+    color: var(--color-grey-dark--3);
 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &__count {
-        
-    }
-
-    &__friend {
-        
-    }
+    // &__count {
+    //     margin-right: auto;
+    // }
 
     &__photo {
+        box-sizing: content-box;
         height: 4rem;
         width: 4rem;
+        border: 3px solid white;
         border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
     }
 }
 
