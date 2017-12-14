@@ -108,10 +108,20 @@
   font-size: 1.4rem;
   list-style: none;
   padding-top: 3.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    padding-top: 0;
+  }
   &__item {
     position: relative;
     &:not(:last-child) {
       margin-bottom: .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
   &__item::before {
@@ -144,6 +154,12 @@
     z-index: 10; // heeft enkel effect als re een position is
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
+    
   }
   &__icon {
     width: 1.75rem;
@@ -161,6 +177,9 @@
   font-size: 1.2rem;
   color: var(--color-grey-light--4);
   padding: 2.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 //////////////////////
@@ -320,9 +339,14 @@
   color: var(--color-grey-dark--3);
   display: flex;
   justify-content: space-between;
-  align-items: center; // &__count {
+  align-items: center; 
+  
+  // &__count {
   //     margin-right: auto;
   // }
+  &__friends {
+    display: flex;
+  }
   &__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -345,6 +369,12 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -395,8 +425,12 @@
 // CTA 
 //////////////////////
 .cta {
-  padding: 3.5rem;
+  padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
   &__book-now {
     font-size: 2rem;
     font-weight: 300;
